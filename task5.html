@@ -56,25 +56,20 @@
 
     <script>
         function generateTable() {
-            // Get the input values
             const number = parseInt(document.getElementById('number').value);
             const length = parseInt(document.getElementById('length').value);
             
-            // Check if inputs are valid
             if (isNaN(number) || isNaN(length)) {
                 alert('Please enter valid numbers.');
                 return;
             }
 
-            // Initialize the result string
             let resultHTML = '<h3>Table of ' + number + ':</h3>';
             
-            // Generate the multiplication table
             for (let i = 1; i <= length; i++) {
                 resultHTML += `${number} x ${i} = ${number * i}<br>`;
             }
 
-            // Display the result
             document.getElementById('result').innerHTML = resultHTML;
         }
     </script>
